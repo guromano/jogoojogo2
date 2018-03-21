@@ -1,0 +1,10 @@
+.scene{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.personagem1{
+    background-color: black;
+    width: 10vw;
+    height: 10vh;
+}

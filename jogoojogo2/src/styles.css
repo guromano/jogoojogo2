@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/css/animate.css";
+/* @font-face {
+    font-family: "8BITWONDERNominal";
+    src: url("../src/assets/fonts/8BITWONDERNominal.eot");
+} */
+
+body{
+    font-family: "8BITWONDERNominal";
+}
+.roxo{
+    background-color: rgb(195, 61, 186);
+}
+
+/* utils */
+.walign-center{
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}

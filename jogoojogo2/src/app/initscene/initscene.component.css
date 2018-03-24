@@ -3,8 +3,11 @@
     height: 100vh;
     text-align: center;
 }
-.personagem1{
-    background-color: black;
-    width: 10vw;
-    height: 10vh;
+.personagem1 img{
+    width: 12vw;
+    height: auto;
+    margin-bottom: 12vw;
+}
+.palco{
+    margin-bottom: 20px;
 }

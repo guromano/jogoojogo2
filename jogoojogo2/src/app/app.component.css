@@ -1,0 +1,13 @@
+#falas{
+    background-color: rgb(230, 230, 230);
+    color: black;
+    border: black 3px solid;
+    position: absolute;
+    bottom: 1vh;
+    height: 27vh;
+    width: 90%;
+    margin-left: 5%;
+    padding: 1vh 2vw 1vh 2vw;
+    font-size: 4vh;
+    display: none;
+}

@@ -8,9 +8,16 @@ body{
     font-family: "8BITWONDERNominal";
 }
 .roxo{
-    background-color: rgb(195, 61, 186);
+    background-color: rgb(96, 6, 181);
+}
+.body{
+    width: 100vw;
+    height: 100vh;
 }
 
+.txtbranco{
+    color:white;
+}
 /* utils */
 .walign-center{
     display: flex;

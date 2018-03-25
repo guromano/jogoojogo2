@@ -1,0 +1,45 @@
+.logo{
+    text-align: center;
+    padding-top: 5vh;
+}
+.body{
+    overflow: hidden;
+}
+.logo span{
+    display: inline-block;
+}
+.letra_cerveja{
+    position: relative;
+}
+.letra_cerveja img{
+    width: 20vh;
+    margin-top: -12vh;
+    position: relative;
+    display: inline-block;
+}
+.letra{
+    font-size: 17vh;
+    position: relative;
+}
+.letram{
+    font-size: 8vh;
+    color:#ff0000;
+    position: relative;
+}
+
+#l1{
+    left:-90vw;
+}
+#l2{
+    top:-50vh;
+}
+#l3{
+    top:100vh;
+}
+#l4{
+    right: -90vw;
+}
+#l5{
+    opacity: 1;
+    margin-right: 20px;
+}

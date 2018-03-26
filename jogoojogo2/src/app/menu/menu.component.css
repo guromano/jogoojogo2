@@ -1,9 +1,13 @@
 .logo{
     text-align: center;
+    position: relative;
     padding-top: 5vh;
 }
 .body{
     overflow: hidden;
+    position: relative;
+    top:0;
+    left:0
 }
 .logo span{
     display: inline-block;
@@ -13,18 +17,22 @@
 }
 .letra_cerveja img{
     width: 20vh;
-    margin-top: -12vh;
+    margin-top: -15vh;
+    margin-left: -1vh;
     position: relative;
     display: inline-block;
 }
 .letra{
     font-size: 17vh;
     position: relative;
+    font-family: "8bit";
+    text-shadow: -1vh 0 black, 0 1vh black, 1vh 0 black, 0 -1vh black;
 }
 .letram{
     font-size: 8vh;
     color:#ff0000;
     position: relative;
+    text-shadow: -0.6vh 0 black, 0 0.6vh black, 0.6vh 0 black, 0 -0.6vh black;
 }
 
 #l1{
@@ -40,6 +48,103 @@
     right: -90vw;
 }
 #l5{
-    opacity: 1;
+    opacity: 0;
     margin-right: 20px;
 }
+#l6{
+    opacity: 0;
+}
+#l7{
+    opacity: 0;
+}
+#l8{ 
+    opacity: 0;
+}
+#l9{
+    opacity: 0;
+}
+.botoes{
+    margin-top: 15vh;
+    text-align: center;
+    height: 30vh;
+    position: relative;
+
+}
+.botao{
+    
+    color: white;
+    font-size: 1.5vw;
+    margin-left:32.5vw;
+    margin-top: 2.5vh;
+    margin-bottom: 5vh; 
+    width: 35vw;
+    padding-top:2vh;
+    padding-bottom:2vh; 
+    border: 3px black solid;
+    opacity: 0;
+    background-color: #ff0000
+}
+.botao{
+    
+    color: white;
+    font-size: 1.5vw;
+    margin-left:32.5vw;
+    margin-top: 2.5vh;
+    margin-bottom: 5vh; 
+    width: 35vw;
+    padding-top:2vh;
+    padding-bottom:2vh; 
+    border: 5px black solid;
+    opacity: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bv{
+    background-color: #ff0000; 
+}
+.ba{
+    background-color: #ffba2e
+}
+.bv:hover{
+    background-color: #ff4a4a;
+    cursor: pointer;
+}
+.ba:hover{
+    background-color: #ffcc66;
+    cursor: pointer;
+}
+#lata1{
+    top:20%;
+    height: 50%;
+    left: -50vw;
+    position: absolute;
+}
+#lata2{
+    top:20%;
+    height: 50%;
+    right: -50vw;
+    position: absolute;
+}
+:host /deep/ .explosion {
+    position: absolute;
+    width: 500px;
+    height: 50vh;
+    pointer-events: none;
+  }
+  :host /deep/ .explosion .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: pop 1s reverse forwards;
+  }
+ @keyframes pop {
+    from {
+      opacity: 0;
+    }
+    to {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+  }
+  

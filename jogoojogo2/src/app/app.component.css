@@ -7,7 +7,8 @@
     height: 27vh;
     width: 90%;
     margin-left: 5%;
-    padding: 1vh 2vw 1vh 2vw;
+    padding: 2vh 2vw 1vh 2vw;
     font-size: 4vh;
+    font-family: '8bit2';
     display: none;
 }

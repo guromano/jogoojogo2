@@ -1,11 +1,23 @@
 @import "../src/assets/css/animate.css";
-/* @font-face {
-    font-family: "8BITWONDERNominal";
-    src: url("../src/assets/fonts/8BITWONDERNominal.eot");
-} */
+@font-face {
+    font-family: "8bit";
+    src: url("../src/assets/fonts/8bit.ttf");
+}
+@font-face {
+    font-family: "8bit2";
+    src: url("../src/assets/fonts/8-bit.ttf");
+}
 
 body{
-    font-family: "8BITWONDERNominal";
+    font-family: "8bit";
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            background-color: rgb(96, 6, 181);
+            overflow: hidden; 
 }
 .roxo{
     background-color: rgb(96, 6, 181);
@@ -17,6 +29,9 @@ body{
 
 .txtbranco{
     color:white;
+}
+.contorno{
+    text-shadow: -1vh 0 black, 0 1vh black, 1vh 0 black, 0 -1vh black;
 }
 /* utils */
 .walign-center{

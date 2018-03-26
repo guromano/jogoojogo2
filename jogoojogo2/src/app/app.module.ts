@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InitsceneComponent } from './initscene/initscene.component';
 import { FalasService } from '../_services/Falas/falas.service';
 import { MenuComponent } from './menu/menu.component';
+import { PersonagensComponent } from './personagens/personagens.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     InitsceneComponent,
     MenuComponent,
+    PersonagensComponent,
   ],
   imports: [
     BrowserModule,

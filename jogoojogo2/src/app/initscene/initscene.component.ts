@@ -3,16 +3,20 @@ import * as $ from "jquery";
 import * as anime from 'animejs';
 import { FalasService } from '../../_services/Falas/falas.service';
 import { Router } from '@angular/router';
+import { slideInOutAnimation } from '../../_animations';
 @Component({
   selector: 'app-initscene',
   templateUrl: './initscene.component.html',
   styleUrls: ['./initscene.component.css'],
+  animations: [slideInOutAnimation],
+  host: { '[@slideInOutAnimation]': '' },
 })
 export class InitsceneComponent implements OnInit {
 
   constructor(@Inject(FalasService) private _falasService :FalasService,private router: Router) { }
 
   ngOnInit() {
+    localStorage.setItem("apresentacao","true");
     setTimeout(() => {
       var Timeline = anime.timeline();
       Timeline.add({

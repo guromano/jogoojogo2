@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { slideInOutAnimation } from '../../_animations';
+import { PersonagensService } from '../../_services/Personagens/personagens.service';
+import { Personagem } from '../../_models/personagem';
 
 @Component({
   selector: 'app-personagens',
@@ -10,9 +12,14 @@ import { slideInOutAnimation } from '../../_animations';
 })
 export class PersonagensComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(PersonagensService) private _personagensService :PersonagensService) { 
+    
+   }
+
+  public personagens:Array<Personagem>;
 
   ngOnInit() {
+    this.personagens = this._personagensService.getPersonagens();
   }
 
 }

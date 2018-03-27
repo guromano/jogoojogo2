@@ -1,3 +1,16 @@
-<p>
-  personagens works!
-</p>
+<div class="escolher_personagens verde">
+<div class="row">
+  <div class="col col-8">
+    <div class="row" id="listapersonagens">
+      <div class="col col-4 personagem_box"  *ngFor="let personagem of personagens">
+        <div class="box vermelho">
+          <div class="imagem_personagem"><img src="{{ personagem.Imagem }}"></div>
+          <h2 class="nome_personagem">{{personagem.Nome}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-4">
+  </div>
+</div>
+</div>

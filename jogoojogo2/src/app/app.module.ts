@@ -10,6 +10,7 @@ import { InitsceneComponent } from './initscene/initscene.component';
 import { FalasService } from '../_services/Falas/falas.service';
 import { MenuComponent } from './menu/menu.component';
 import { PersonagensComponent } from './personagens/personagens.component';
+import { PersonagensService } from '../_services/Personagens/personagens.service';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PersonagensComponent } from './personagens/personagens.component';
     NgbModule.forRoot()
   ],
   providers: [
-    FalasService
+    FalasService,
+    PersonagensService
   ],
   bootstrap: [AppComponent]
 })

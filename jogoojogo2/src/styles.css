@@ -22,6 +22,12 @@ body{
 .roxo{
     background-color: rgb(96, 6, 181);
 }
+.verde{
+    background-color: #2cff8c;
+}
+.vermelho{
+    background-color:#ff0000;
+}
 .body{
     width: 100vw;
     height: 100vh;

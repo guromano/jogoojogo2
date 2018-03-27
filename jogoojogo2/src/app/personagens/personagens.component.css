@@ -1,0 +1,20 @@
+.imagem_personagem img{
+    height: 20vh;
+    width: auto;
+}
+.personagem_box{
+    text-align: center;
+    padding: 20px;
+}
+.personagem_box .box{
+    border:black 2px solid;
+    padding: 20px;
+}
+.imagem_personagem{
+    padding: 20px;
+    border: 3px black solid;
+}
+.escolher_personagens{
+    width: 100vw;
+    height: 100vh;;
+}

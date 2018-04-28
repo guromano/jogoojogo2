@@ -1,16 +1,19 @@
 <div class="escolher_personagens verde">
-<div class="row">
+  <div class="row">
+    <div class="col-6">
+      <div id="apresentacao">
+        <h1></h1>
+        <img>
+      </div>
+    </div>
+  </div>
+  <div class="row">
   <div class="col col-8">
-    <div class="row" id="listapersonagens">
-      <div class="col col-4 personagem_box"  *ngFor="let personagem of personagens">
-        <div class="box vermelho">
-          <div class="imagem_personagem"><img src="{{ personagem.Imagem }}"></div>
-          <h2 class="nome_personagem">{{personagem.Nome}}</h2>
+    <div id="listapersonagens">
+      <div class="personagem_box" id="p{{personagem.id}}"  *ngFor="let personagem of personagens" (mouseenter) ="apresentar_personagem(personagem,$event) "  (mouseleave) ="limpar_apresentacao()">
+        <img src="{{ personagem.Imagem }}">
         </div>
       </div>
     </div>
   </div>
-  <div class="col col-4">
-  </div>
-</div>
 </div>

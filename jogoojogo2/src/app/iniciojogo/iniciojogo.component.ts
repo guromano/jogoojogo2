@@ -1,20 +1,17 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import * as $ from "jquery";
-import * as anime from 'animejs';
 import { FalasService } from '../../_services/Falas/falas.service';
+import * as anime from 'animejs';
 import { Router } from '@angular/router';
-import { slideInOutAnimation } from '../../_animations';
 import { BarradevidaService } from '../../_services/BarraDeVida/barradevida.service';
-@Component({
-  selector: 'app-initscene',
-  templateUrl: './initscene.component.html',
-  styleUrls: ['./initscene.component.css'],
-  animations: [slideInOutAnimation],
-  host: { '[@slideInOutAnimation]': '' },
-})
-export class InitsceneComponent implements OnInit {
 
-constructor(
+@Component({
+  selector: 'app-iniciojogo',
+  templateUrl: './iniciojogo.component.html',
+  styleUrls: ['./iniciojogo.component.css']
+})
+export class IniciojogoComponent implements OnInit {
+
+  constructor(
   @Inject(BarradevidaService) private _barradevidaService :BarradevidaService,
   @Inject(FalasService) private _falasService :FalasService,
   private router: Router) { }
@@ -33,7 +30,7 @@ constructor(
         easing: 'easeInOutQuad'
       })
       setTimeout(()=>{
-        this._falasService.gerarFala("Kobrer","BLA BLA BLA BLA BLA BLA BLA",() => {this.router.navigate(['/menu']);});
+        this._falasService.gerarFala("Krobrer","Aqui teremos que fazer uma historinha para comecar o jogo",() => {this.router.navigate(['/menu']);});
       },3000);
     },100);  
   }

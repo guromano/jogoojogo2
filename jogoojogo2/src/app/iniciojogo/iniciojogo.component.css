@@ -1,0 +1,13 @@
+.scene{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.personagem1 img{
+    width: 12vw;
+    height: auto;
+    margin-bottom: 12vw;
+}
+.palco{
+    margin-bottom: 20px;
+}

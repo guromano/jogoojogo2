@@ -12,7 +12,7 @@ export class FalasService {
   gerarFala(personagem:string,texto:string,callback:any = null):void{
      this.showBox();
     var letras = texto.split("");
-    var tempokill = letras.length * 250;
+    var tempokill = letras.length * 50;
     this.falasBox.innerHTML = personagem+": ";
     //animacao de aparecer letras
     var i = 0

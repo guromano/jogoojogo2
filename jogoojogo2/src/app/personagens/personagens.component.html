@@ -1,4 +1,22 @@
 <div class="escolher_personagens verde">
+  <div id="players">
+    <div class="box_player bounceInRight animated" id="j{{jogador.id}}"  *ngFor="let jogador of jogadores; let i=index">
+        <input placeholder="Digite o nome do jogador..." [(ngModel)]="jogadores[i].nome">
+        <span class="excbutton" (click)="removerjogador(jogador)">X</span>
+        <h2>{{jogador.personagem.nome}}</h2>
+        <div class="img">
+          <img src="{{jogador.personagem.imagem}}">
+        </div>
+      </div>
+  </div>
+  <div id="painel">
+      <div class="button" (click)="this.router.navigate(['/menu']);">
+        Voltar
+      </div>
+      <div id="iniciar" class="button {{jogadores.length > 3? '' : 'disable'}}" (click)="iniciar()">
+        Iniciar  
+      </div>
+  </div>
   <div class="row">
     <div class="col-6">
       <div id="apresentacao">
@@ -10,8 +28,12 @@
   <div class="row">
   <div class="col col-8">
     <div id="listapersonagens">
-      <div class="personagem_box" id="p{{personagem.id}}"  *ngFor="let personagem of personagens" (mouseenter) ="apresentar_personagem(personagem,$event) "  (mouseleave) ="limpar_apresentacao()">
-        <img src="{{ personagem.Imagem }}">
+      <div class="personagem_box" id="p{{personagem.id}}" 
+       *ngFor="let personagem of personagens" 
+       (click)="adicionarjogador(personagem,$event)" 
+       (mouseenter) ="apresentar_personagem(personagem,$event) "  
+       (mouseleave) ="limpar_apresentacao()">
+        <img src="{{ personagem.imagem }}">
         </div>
       </div>
     </div>

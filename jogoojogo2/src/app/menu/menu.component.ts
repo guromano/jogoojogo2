@@ -5,6 +5,7 @@ import * as $ from "jquery";
 import { Router } from '@angular/router';
 import { debug } from 'util';
 import { slideInOutAnimation } from '../../_animations';
+import { BarradevidaService } from '../../_services/BarraDeVida/barradevida.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,9 +16,13 @@ import { slideInOutAnimation } from '../../_animations';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(@Inject(FalasService) private _falasService :FalasService,private router: Router) { }
+  constructor(
+    @Inject(BarradevidaService) private _barradevidaService :BarradevidaService,
+    @Inject(FalasService) private _falasService :FalasService,
+    private router: Router) { }
 
   ngOnInit() {
+    this._barradevidaService.esconderBarraDeVida();
     if(localStorage.getItem("apresentacao") == "true" || !localStorage.getItem("apresentacao"))
       setTimeout(() => { this.logoAnimaton() },1000);
     else{

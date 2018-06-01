@@ -4,9 +4,14 @@
     padding-left: 3vw;
 }
 #apresentacao{
-    height: 40vh;
+    height: 35vh;
     margin-top:3vh;
     margin-bottom: 3vh;
+}
+#listapersonagens{
+    height: 43.2vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 #apresentacao img{
     height: 60%;
@@ -15,21 +20,115 @@
     width: 7vw;
     height: 7vw;
     display: inline-block;
-    border:2px solid black;
+    border:2px solid var(--contorno);
     text-align: center;
-    background-color: rgba(80,80,80,0.5);
+    background-color: var(--fundo_escuro_transparente);
 }
 .personagem_box img{
-    height: 100%;
+    height: 90%;
+}
+.personagem_box.escolhido{
+    opacity: 0.3;
+}
+.personagem_box.escolhido:hover{
+    animation: none;
+    cursor: not-allowed;
 }
 .personagem_box:hover{
     animation:piscar 0.25s infinite;
     cursor: pointer;
 }
-@-webkit-keyframes piscar
+#players{
+    position:fixed;
+    right:0;
+    width:25vw;
+    height: 100vh;
+    padding-top: 2vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left:1vw;
+    padding-right: 1vw; 
+}
+.box_player{
+    display: block;
+    position: relative;
+    animation:aparecer 0.25s;
+    text-align: center;
+    border:solid 2px black;
+    margin-top: 1vh;
+    background-color: var(--fundo_claro_transparente);
+}
+.box_player h2{
+    margin-top: 1vh;
+    font-size: 3vh;
+}
+.box_player input{
+    padding: 1vh;
+    display: inline-block;
+    width: 78%;
+    text-align: center;
+    border:var(--fundo_escuro_transparente) 0.5px solid;
+    background-color: var(--fundo_claro_transparente);
+    font-size: 1.60vh;
+}
+.box_player .excbutton{
+    color: var(--texto_claro);
+    width: 19%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: inline-block;
+    background-color: var(--vermelho);
+}
+.box_player .excbutton:hover{
+    cursor: pointer;
+    background-color: var(--vermelho_escuro);
+}
+.box_player .img{
+    width: 7vw;
+    height: 7vw; 
+    margin-bottom: 1vh;
+    display: inline-block;
+}
+.box_player .img img{
+    height: 100%;
+}
+#painel{
+    display: fixed;
+    position: absolute;
+    bottom: 2vh;
+    height: 12vh;
+    width: 60vw;
+}
+#painel .button{
+    display: inline-block;
+    padding-top: 3vh;
+    font-size: 3vh;
+    color:var(--texto_claro);
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 25%;
+    border: 2px solid var(--contorno);
+    background-color: var(--vermelho);
+    transition: 0.5s;
+}
+#painel .button:hover{
+    background-color: var(--vermelho_escuro);
+    cursor: pointer;
+}
+#painel .button.disable{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+@keyframes aparecer {
+    from {right:-700px;}
+    to {right: 0;}
+}
+
+@keyframes piscar
 {
-0%   {background:rgba(80,80,80,0.5);}
-50%  {background:rgba(255,255,255,0.5);}
-100%   {background:rgba(80,80,80,0.5);;}
+0%   {background:var(--fundo_escuro_transparente);}
+50%  {background:var(--fundo_claro_transparente);}
+100%   {background:var(--fundo_escuro_transparente);}
 }
   

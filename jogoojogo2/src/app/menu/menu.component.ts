@@ -160,6 +160,7 @@ export class MenuComponent implements OnInit {
   }
 
   goto(url):void{
+    window.localStorage.clear();
     this.router.navigate(["/"+url]);
   }
 }

@@ -20,6 +20,7 @@ constructor(
   private router: Router) { }
 
   ngOnInit() {
+    //CENA DE APRESENTACAO DO JOGO
     this._barradevidaService.esconderBarraDeVida();
     localStorage.setItem("apresentacao","true");
     setTimeout(() => {

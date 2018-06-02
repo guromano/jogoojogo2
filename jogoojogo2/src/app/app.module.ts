@@ -16,6 +16,8 @@ import { IniciojogoComponent } from './iniciojogo/iniciojogo.component';
 import { PrejogoComponent } from './prejogo/prejogo.component';
 import { VezComponent } from './vez/vez.component';
 import { BarradevidaService } from '../_services/BarraDeVida/barradevida.service';
+import { ControledevezService } from '../_services/ControleDeVez/controledevez.service';
+import { PlacarService } from '../_services/Placar/placar.service';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { BarradevidaService } from '../_services/BarraDeVida/barradevida.service
   providers: [
     FalasService,
     PersonagensService,
-    BarradevidaService
+    BarradevidaService,
+    ControledevezService,
+    PlacarService
   ],
   bootstrap: [AppComponent]
 })

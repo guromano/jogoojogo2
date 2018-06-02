@@ -1,3 +1,23 @@
-<p>
-  prejogo works!
-</p>
+<div id="prejogo" class="body azul">
+  <div class="ordemJogadores">
+    <h1 class=" bounceIn animated contorno">Ordem dos Jogadores</h1>
+    <div class="apresentacao">
+      <div class="button aparecer">
+        Iniciar
+      </div>
+      <div class="jogApresentado">
+        <div class="pos" *ngIf="jogadorApresentado != null">{{jogadorApresentado.pos+1}} - {{jogadorApresentado.jogador.nome}}</div>
+        <div class="info" *ngIf="jogadorApresentado != null">
+          <h2>{{jogadorApresentado.jogador.personagem.nome}}</h2>
+          <img src="{{jogadorApresentado.jogador.personagem.imagem}}">
+        </div>
+      </div>
+    </div>  
+ 
+    <div class="lista">
+      <div class="jogadoreslista aparecer" *ngFor="let oj of ordemJogadoresListar;">
+            {{oj.pos}} - {{oj.jogador.nome}}
+      </div>
+    </div>  
+  </div>    
+</div>

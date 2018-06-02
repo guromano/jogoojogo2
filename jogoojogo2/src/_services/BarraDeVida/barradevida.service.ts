@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class BarradevidaService {
 
-  private valorBarra:HTMLDivElement;
-  private Barra:HTMLDivElement;
+  private valorBarra:HTMLElement;
+  private Barra:HTMLElement;
 
   constructor() { 
-    this.valorBarra = document.querySelector('#barradevidabar .barra_valor');
-    this.Barra = document.querySelector('#barradevidabar');
+    this.valorBarra = document.querySelector('#barradevidabar .barra_valor') as HTMLElement;
+    this.Barra = document.querySelector('#barradevidabar') as HTMLElement;
   }
 
   public vida:number;

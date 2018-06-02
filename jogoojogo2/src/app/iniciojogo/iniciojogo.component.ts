@@ -3,11 +3,13 @@ import { FalasService } from '../../_services/Falas/falas.service';
 import * as anime from 'animejs';
 import { Router } from '@angular/router';
 import { BarradevidaService } from '../../_services/BarraDeVida/barradevida.service';
+import { slideInOutAnimation } from '../../_animations';
 
 @Component({
   selector: 'app-iniciojogo',
   templateUrl: './iniciojogo.component.html',
-  styleUrls: ['./iniciojogo.component.css']
+  styleUrls: ['./iniciojogo.component.css'],
+  animations: [slideInOutAnimation],
 })
 export class IniciojogoComponent implements OnInit {
 
@@ -17,6 +19,7 @@ export class IniciojogoComponent implements OnInit {
   private router: Router) { }
 
   ngOnInit() {
+    //TODO CENA DE INICIO DO JOGO
     this._barradevidaService.esconderBarraDeVida();
     localStorage.setItem("apresentacao","true");
     setTimeout(() => {
@@ -30,7 +33,7 @@ export class IniciojogoComponent implements OnInit {
         easing: 'easeInOutQuad'
       })
       setTimeout(()=>{
-        this._falasService.gerarFala("Krobrer","Aqui teremos que fazer uma historinha para comecar o jogo",() => {this.router.navigate(['/menu']);});
+        this._falasService.gerarFala("Krobrer","Aqui teremos que fazer uma historinha para comecar o jogo",() => {this.router.navigate(['/prejogo']);});
       },3000);
     },100);  
   }

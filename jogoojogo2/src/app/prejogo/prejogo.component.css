@@ -1,0 +1,96 @@
+.ordemJogadores{
+    width: 100%;
+    padding: 2vh;
+}
+.ordemJogadores h1{
+    color:var(--texto_claro);
+    margin-top: 5vh;
+    text-align: center;
+}
+.apresentacao{
+    width: 100vw;
+    margin-top: 5vh;
+    height: 30vh;
+    color:var(--texto_claro);
+    text-align: center;
+}
+.jogApresentado{
+    position: relative;
+    width: 40vw;
+    margin-left: 30vw;
+    height: 100%;
+}
+
+.jogApresentado .pos{
+    text-align: center;
+    font-size: 4vh;
+}
+.jogApresentado .info{
+    text-align: center;
+}
+.jogApresentado .info h2{
+    font-size: 3vh;
+    opacity: 0.6;
+}
+.jogApresentado .info img{
+    display: inline-block;
+    height: 20vh;
+    text-align: right;
+    width: auto;
+}
+.jogApresentado.aparecer{
+    animation: aparecerslide 0.5s;
+}
+.jogApresentado.desaparecer{
+    animation: desaparecer 0.5s;
+}
+.jogadoreslista.aparecer{
+    display: inline-block;
+    animation: aparecer 0.5s; 
+    margin-right: 2vw;
+}
+.lista{
+    text-align: center;
+    margin-top: 10vh;
+    width: 80vw;
+    margin-left: 10vw;
+    color: var(--contorno);
+}
+.button{
+    padding-top: 2vh;
+    margin-top:10vh; 
+    font-size: 3vh;
+    color:var(--texto_claro);
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+    height: 10vh;
+    width: 25vw;
+    border: 2px solid var(--contorno);
+    background-color: var(--vermelho);
+    transition: 0.5s;
+}
+.button:hover{
+    background-color: var(--vermelho_escuro);
+    cursor: pointer;
+}
+.button.aparecer{
+    animation: aparecer 0.5s; 
+}
+
+@keyframes aparecerslide
+{
+0%   {right:-120vw;opacity: 0;}
+50%   {right:-60vw;opacity: 0.3;}
+100%   {right:0;opacity: 1;}
+}
+@keyframes aparecer
+{
+0%   {opacity: 0;}
+100%   {opacity: 1;}
+}
+@keyframes desaparecer
+{
+0%   {opacity: 1;}
+100%   {opacity: 0;}
+}

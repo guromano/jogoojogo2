@@ -12,6 +12,8 @@
     --verde:#2cff8c;
     --vermelho:#ff0000;
     --vermelho_escuro:#d60505;
+    --azul:#295da7;
+    --amarelo:#d2bc1e;
     --texto_claro:white;
     --contorno:black;
     --fundo_escuro_transparente:rgba(80,80,80,0.5);
@@ -19,14 +21,18 @@
    }
 body{
     font-family: "8bit";
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
             user-select: none;
             background-color: var(--roxo);
             overflow: hidden; 
+}
+.body{
+    height: 100vh;
+    width: 100vw;
 }
 .roxo{
     background-color:  var(--roxo);
@@ -36,6 +42,12 @@ body{
 }
 .vermelho{
     background-color:var(--vermelho);
+}
+.azul{
+    background-color:var(--azul);
+}
+.amarelo{
+    background-color:var(--amarelo);
 }
 .body{
     width: 100vw;

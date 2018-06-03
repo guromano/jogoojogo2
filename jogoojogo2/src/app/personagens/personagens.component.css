@@ -108,7 +108,7 @@
     vertical-align: middle;
     height: 100%;
     width: 25%;
-    border: 2px solid var(--contorno);
+    border: 5px solid var(--contorno);
     background-color: var(--vermelho);
     transition: 0.5s;
 }

@@ -18,6 +18,7 @@ import { VezComponent } from './vez/vez.component';
 import { BarradevidaService } from '../_services/BarraDeVida/barradevida.service';
 import { ControledevezService } from '../_services/ControleDeVez/controledevez.service';
 import { PlacarService } from '../_services/Placar/placar.service';
+import { ControlePontosService } from '../_services/ContolePontos/controle-pontos.service';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { PlacarService } from '../_services/Placar/placar.service';
     PersonagensService,
     BarradevidaService,
     ControledevezService,
-    PlacarService
+    PlacarService,
+    ControlePontosService
   ],
   bootstrap: [AppComponent]
 })

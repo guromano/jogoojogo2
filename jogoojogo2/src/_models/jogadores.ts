@@ -8,6 +8,7 @@ export class Jogador {
         this.personagem = personagem;
     }
 
+   
     public id:number;
     public nome:string;
     public personagem:Personagem;

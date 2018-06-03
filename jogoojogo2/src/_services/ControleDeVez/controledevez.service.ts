@@ -18,12 +18,10 @@ export class ControledevezService {
   }
   
   public jogadorVez():Jogador{
-    var retorno =  this.OrdemJogadores[this.vezIndex].jogador;
-    this.PassarVez();
-    return retorno;
+    return this.OrdemJogadores[this.vezIndex].jogador;
   }
   
-  private PassarVez():void{
+  public PassarVez():void{
     this.vezIndex++;
     if(this.vezIndex >= this.OrdemJogadores.length){
       this.vezIndex = 0;

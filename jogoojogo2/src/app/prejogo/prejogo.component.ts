@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { ControledevezService } from '../../_services/ControleDeVez/controledevez.service';
 import { OrdemJogador } from '../../_models/ordemJogadore';
 import { slideInOutAnimation } from '../../_animations';
+import { JogadorPlacar } from '../../_models/jogador-placar';
+import { ControlePontosService } from '../../_services/ContolePontos/controle-pontos.service';
 
 @Component({
   selector: 'app-prejogo',
@@ -22,6 +24,7 @@ export class PrejogoComponent implements OnInit {
   @Inject(BarradevidaService) private _barradevidaService :BarradevidaService,
   @Inject(PersonagensService) private _personagensService :PersonagensService,
   @Inject(ControledevezService) private _controledevezService :ControledevezService,
+  @Inject(ControlePontosService) private _controlepontosService :ControlePontosService,
   private router: Router) { 
     this.ordemJogadoresListar = new Array<OrdemJogador>();
     this.ordemJogadores = _controledevezService.getOrdemJogadores();
@@ -35,7 +38,7 @@ export class PrejogoComponent implements OnInit {
 
   exibirProximo(index:number){
     this.jogadorApresentado = this.ordemJogadores[index];
-    var boxJogadorApresentado = document.querySelector<HTMLElement>(".apresentacao .jogApresentado");
+    var boxJogadorApresentado = document.querySelector(".apresentacao .jogApresentado") as HTMLElement;
     boxJogadorApresentado.classList.remove("desaparecer");
     boxJogadorApresentado.classList.add("aparecer");
     setTimeout(() => {
@@ -51,8 +54,18 @@ export class PrejogoComponent implements OnInit {
       setTimeout(() => {
         this.ordemJogadoresListar.push(this.ordemJogadores[index]);
         boxJogadorApresentado.style.display = "none";
-        document.querySelector<HTMLElement>(".apresentacao .button").style.display = "inline-block";
+        var button = document.querySelector(".apresentacao .button") as HTMLElement;
+        button.style.display = "inline-block";
       },1900);
     }
+  }
+
+  iniciarjogo(){
+    var pontuacaoJogadores = new Array<JogadorPlacar>();
+    this.ordemJogadores.forEach(oj => {
+      pontuacaoJogadores.push(new JogadorPlacar(oj.jogador));
+    });
+    this._controlepontosService.saveNewGame(pontuacaoJogadores);
+    this.router.navigate(["/vez"])
   }
 }

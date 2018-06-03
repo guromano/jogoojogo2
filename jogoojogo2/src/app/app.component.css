@@ -32,31 +32,50 @@
     background-color: var(--contorno);
     color: var(--texto_claro);
 }
+#barradevidabar .lado{
+    display: block;
+    position: relative;
+    margin: 0;
+    width: 10vw;
+    height: 3vh;
+    text-align: center;
+    font-size: 2vh;
+    background-color: var(--contorno);
+    color: var(--texto_claro);
+}
 #barradevidabar .barra{
     display: block;
     margin: 0;
     width: 100%;
     height: 4vh;
     border: 3px var(--contorno) solid;
-    background-color: var(--texto_claro);
+    animation: emprego 1s infinite;
 }
 #barradevidabar .barra .valor-barra{
     display: block;
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--verde);
+    animation: bar 1s infinite;
     transition: 0.5s all;
 }
-
-#barradevidabar .barra .valor-barra.acabando{
-    animation: acabandovida 1s infinite;
+.lado.esquerda{
+    float: left;
+}
+.lado.direita{
+    float: right;
 }
 
 
-@keyframes acabandovida
+@keyframes bar
 {
-0%   {background:var(--verde);}
-50%  {background:var(--vermelho);}
-100%   {background:var(--verde);}
+0%   {background:var(--azul);}
+50%  {background:var(--azul_escuro);}
+100%   {background:var(--azul);}
+}
+@keyframes emprego
+{
+0%   {background:var(--vermelho);}
+50%  {background:var(--vermelho_escuro);}
+100%   {background:var(--vermelho);}
 }

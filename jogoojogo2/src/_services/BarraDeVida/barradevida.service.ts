@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as $ from "jquery";
 
 @Injectable()
 export class BarradevidaService {
@@ -7,7 +8,7 @@ export class BarradevidaService {
   private Barra:HTMLElement;
 
   constructor() { 
-    this.valorBarra = document.querySelector('#barradevidabar .barra_valor') as HTMLElement;
+    this.valorBarra = document.querySelector('#barradevidabar .valor-barra') as HTMLElement;
     this.Barra = document.querySelector('#barradevidabar') as HTMLElement;
   }
 
@@ -18,19 +19,16 @@ export class BarradevidaService {
       novoValor = 0;
     if(novoValor > 100)
       novoValor = 100;
-    if(novoValor <= 20)
-      this.valorBarra.classList.add('acabando');
-    else
-      this.valorBarra.classList.remove('acabando');
-    this.valorBarra.style.width = novoValor+"%";
+
+      $(this.valorBarra).css("width",novoValor+"%");
   }
 
   public mostrarBarraDeVida():void{
-    this.Barra.style.display = "block";
+    $(this.Barra).slideDown();
   }
 
   public esconderBarraDeVida():void{
-    this.Barra.style.display = "none";
+    $(this.Barra).slideUp();
   }
 
 }

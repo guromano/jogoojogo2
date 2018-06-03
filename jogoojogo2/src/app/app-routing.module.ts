@@ -5,6 +5,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PersonagensComponent } from './personagens/personagens.component';
 import { IniciojogoComponent } from './iniciojogo/iniciojogo.component';
 import { PrejogoComponent } from './prejogo/prejogo.component';
+import { VezComponent } from './vez/vez.component';
 
 const routes: Routes = [
     { path: '', component:  InitsceneComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: 'personagens', component:  PersonagensComponent },
     { path: 'iniciojogo', component:  IniciojogoComponent },
     { path: 'prejogo', component:  PrejogoComponent },
+    { path: 'vez', component:  VezComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { JogadorPlacar } from '../../_models/jogador-placar';
+import { JogadorPlacar } from '../../_models/jogador/jogador-placar';
 
 @Injectable()
 export class ControlePontosService {

@@ -2,12 +2,12 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { slideInOutAnimation,listaDeAnimacoes } from '../../_animations';
 import { PersonagensService } from '../../_services/Personagens/personagens.service';
 import * as anime from 'animejs';
-import { Personagem } from '../../_models/personagem';
 import * as $ from "jquery";
-import { Jogador } from '../../_models/jogadores';
 import { debug } from 'util';
 import { Router } from '@angular/router';
 import { BarradevidaService } from '../../_services/BarraDeVida/barradevida.service';
+import { Personagem } from '../../_models/personagem/personagem';
+import { Jogador } from '../../_models/jogador/jogadores';
 
 @Component({
   selector: 'app-personagens',

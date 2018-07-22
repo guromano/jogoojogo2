@@ -1,0 +1,58 @@
+[
+    {
+    "tipo":1,
+    "idJogo":13,
+    "icone":"",
+    "nome":"Devasso ou Soutinho",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":1,
+    "idJogo":14,
+    "icone":"",
+    "nome":"Animado ou Parado",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":1,
+    "idJogo":15,
+    "icone":"",
+    "nome":"Novo ou Velho",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":1,
+    "idJogo":16,
+    "icone":"",
+    "nome":"Sensual ou saco de batata",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":1,
+    "idJogo":17,
+    "icone":"",
+    "nome":"Legal ou chato",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":1,
+    "idJogo":18,
+    "icone":"",
+    "nome":"Bonito ou Feio",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":1,
+    "idJogo":19,
+    "icone":"",
+    "nome":"Inteligente ou Burro",
+    "tipoTime":0,
+    "pontosGeral":1
+    }
+]

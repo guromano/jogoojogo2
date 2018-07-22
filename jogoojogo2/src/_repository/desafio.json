@@ -1,0 +1,34 @@
+[
+    {
+    "tipo":3,
+    "idJogo":9,
+    "icone":"",
+    "nome":"Desafio",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":3,
+    "idJogo":10,
+    "icone":"",
+    "nome":"Fazer storie vergonhoso",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":3,
+    "idJogo":11,
+    "icone":"",
+    "nome":"Drink Azelele",
+    "tipoTime":0,
+    "pontosGeral":1
+    },
+    {
+    "tipo":3,
+    "idJogo":12,
+    "icone":"",
+    "nome":"Cheire o pé do mathias",
+    "tipoTime":0,
+    "pontosGeral":1
+    }
+]

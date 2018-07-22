@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nome": "Teste",
+        "imagem": "/assets/images/krober.png"
+    },
+    {
+        "id": 2,
+        "nome": "Teste2",
+        "imagem": "/assets/images/caveira.png"
+    },
+    {
+        "id": 3,
+        "nome": "Teste3",
+        "imagem": "/assets/images/beer.png"
+    },
+    {
+        "id": 3,
+        "nome": "Teste3",
+        "imagem": "/assets/images/espada.png"
+    }
+]

@@ -3,10 +3,10 @@ import { BarradevidaService } from '../../_services/BarraDeVida/barradevida.serv
 import { PersonagensService } from '../../_services/Personagens/personagens.service';
 import { Router } from '@angular/router';
 import { ControledevezService } from '../../_services/ControleDeVez/controledevez.service';
-import { OrdemJogador } from '../../_models/ordemJogadore';
 import { slideInOutAnimation } from '../../_animations';
-import { JogadorPlacar } from '../../_models/jogador-placar';
 import { ControlePontosService } from '../../_services/ContolePontos/controle-pontos.service';
+import { OrdemJogador } from '../../_models/jogador/ordemJogador';
+import { JogadorPlacar } from '../../_models/jogador/jogador-placar';
 
 @Component({
   selector: 'app-prejogo',

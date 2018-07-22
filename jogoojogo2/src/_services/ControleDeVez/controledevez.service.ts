@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { OrdemJogador } from '../../_models/ordemJogadore';
-import { Jogador } from '../../_models/jogadores';
+
+import { Jogador } from '../../_models/jogador/jogadores';
+import { OrdemJogador } from '../../_models/jogador/ordemJogador';
 
 @Injectable()
 export class ControledevezService {

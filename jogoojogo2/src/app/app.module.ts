@@ -19,6 +19,8 @@ import { BarradevidaService } from '../_services/BarraDeVida/barradevida.service
 import { ControledevezService } from '../_services/ControleDeVez/controledevez.service';
 import { PlacarService } from '../_services/Placar/placar.service';
 import { ControlePontosService } from '../_services/ContolePontos/controle-pontos.service';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { ControlePontosService } from '../_services/ContolePontos/controle-ponto
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     FormsModule
@@ -44,7 +47,8 @@ import { ControlePontosService } from '../_services/ContolePontos/controle-ponto
     BarradevidaService,
     ControledevezService,
     PlacarService,
-    ControlePontosService
+    ControlePontosService,
+    HttpModule
   ],
   bootstrap: [AppComponent]
 })

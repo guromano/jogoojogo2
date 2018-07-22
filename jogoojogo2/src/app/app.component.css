@@ -65,6 +65,24 @@
 .lado.direita{
     float: right;
 }
+.event{
+    width: 20vw;
+    margin-left: 40vw;
+    margin-top: 10px;
+    border: 4px solid var(--preto);
+    height: 10vw;
+    background-color: var(--fundo_claro);
+    color: var(--preto);
+    font-size: 30px;
+}
+.sinal
+{
+    font-family: "8bit2";
+    margin-left: 5px;
+}
+.valor{
+    font-size:40px;
+}
 
 
 @keyframes bar

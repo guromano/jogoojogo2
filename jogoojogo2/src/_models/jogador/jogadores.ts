@@ -1,4 +1,4 @@
-import { Personagem } from "./personagem";
+import { Personagem } from "../personagem/personagem";
 
 export class Jogador {
 

@@ -1,0 +1,46 @@
+[
+    {
+    "tipo":1,
+    "idJogo":20,
+    "icone":"",
+    "nome":"FunilShot",
+    "tipoTime":0,
+    "pontosGeral":1,
+    "sorteioPlacas":true,
+    "sorteioAdversario":false,
+    "sorteioTime":false
+    },
+    {
+    "tipo":1,
+    "idJogo":21,
+    "icone":"",
+    "nome":"BeerPong",
+    "tipoTime":0,
+    "pontosGeral":1,
+    "sorteioPlacas":false,
+    "sorteioAdversario":true,
+    "sorteioTime":false
+    },
+    {
+    "tipo":1,
+    "idJogo":22,
+    "icone":"",
+    "nome":"FlipCup",
+    "tipoTime":0,
+    "pontosGeral":1,
+    "sorteioPlacas":false,
+    "sorteioAdversario":false,
+    "sorteioTime":true
+    },
+    {
+    "tipo":1,
+    "idJogo":23,
+    "icone":"",
+    "nome":"Desafio de shot",
+    "tipoTime":0,
+    "pontosGeral":1,
+    "sorteioPlacas":false,
+    "sorteioAdversario":false,
+    "sorteioTime":false
+    }
+]

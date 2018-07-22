@@ -1,3 +1,31 @@
+#apresentacao-vez{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    background-color: var(--bordo);
+    z-index: 999999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color:var(--texto_claro);
+    font-size: 15vh;
+}
+#apresentacao-vez .vezde{
+    opacity: 0;
+}
+#apresentacao-vez .nomejogador{
+    opacity: 0;
+    display: none;
+}
 .info-bar{
     width: 37.5vw;
     height: 30vh;
@@ -30,8 +58,8 @@
     float: right;
 }
 .jogadorvez .personagem img{
-    height: 20vh;
-    width: auto;
+    height: auto;
+    width: 7vw;
 }
 .jogadorvez .valoresjogador{
     display: inline-block;
@@ -47,5 +75,47 @@
 .jogadorvez .valoresjogador .pontos{
     font-size: 7vh;
 }
-
-
+.blocoextra{
+    width: 30vw;
+    height: 55vh;
+    display: block;
+    position: relative;
+}
+.blocoextra.bar{
+    float: left;
+}
+.blocoextra.trabalho{
+    float: right;
+}
+.roleta{
+    width: 40vw;
+    height: 55vh;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5vh;
+}
+#girarRoleta{
+    display: inline-flex;
+    margin-top: 20vh;
+}
+.swiper-container {
+    width: 20vw;
+    height: 20vw;
+    padding: 2vw;
+  }
+  .swiper-slide {
+    width: 18vw;
+    height: 20vw;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      border:2px solid black;
+  }

@@ -2,13 +2,37 @@
   <div class="info-bar"></div>
   <div class="jogadorvez">
     <div class="valoresjogador">
-      <p class="nome bounceInRight animated">{{jogadorPlacarDaVez.nome}}</p>
-      <p class="pontos bounceInLeft animated">{{posicao}} - {{jogadorPlacarDaVez.litrao}}L</p>
+      <p id="nomej" class="nome">{{jogadorPlacarDaVez.nome}}</p>
+      <p id="pontosj"  class="pontos">{{posicao}} - {{jogadorPlacarDaVez.litrao}}L</p>
     </div>
     <div class="personagem">
-      <div class="nome bounceInUp animated">{{jogadorPlacarDaVez.personagem.nome}}</div>
-      <img class="bounceInDown animated" src="{{jogadorPlacarDaVez.personagem.imagem}}">
+      <div id="nomep" class="nome">{{jogadorPlacarDaVez.personagem.nome}}</div>
+      <img  id="imgp" src="{{jogadorPlacarDaVez.personagem.imagem}}">
     </div>
   </div>
   <div class="info-trabalho"></div>
+  <div class="blocoextra bar">
+
+  </div>
+  <div class="roleta">
+      <div id="girarRoleta" class="botao" (click)="girarRoleta()">Girar Roleta</div>
+      <div id="swipper" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide verde">teste</div>
+            <div class="swiper-slide azul">teste 2</div>
+            <div class="swiper-slide vermelho">teste 3</div>
+            <div class="swiper-slide verde">teste 4</div>
+            <div class="swiper-slide azul">teste 5</div>
+            <div class="swiper-slide vermelho">teste 6</div>
+          </div>
+      
+      </div>
+  </div>
+  <div class="blocoextra trabalho">
+
+    </div>
+    <div id="apresentacao-vez">
+        <div class="vezde contorno">Vez de</div>
+        <div class="nomejogador contorno">{{jogadorPlacarDaVez.nome}}</div>
+    </div>
 </div>

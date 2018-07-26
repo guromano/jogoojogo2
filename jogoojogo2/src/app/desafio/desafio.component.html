@@ -1,0 +1,13 @@
+<div id="desafio" class="body">
+    <div class="icone"></div>
+    <div class="titulo"><h1 id="nomejogo" class="contorno">{{desafio.nome}}</h1></div>
+    <div class="jogador-sorteado" *ngIf="desafiador">
+      Desafiado por
+      <h2>{{desafiador.nome}}</h2>
+      <img src="{{desafiador.personagem.imagem}}">
+    </div>
+    <div class="opcoes">
+      <div (click)="arregar()" class="botao inline">Arregar</div>
+      <div (click)="encarar()" class="botao inline lf">Encarar</div>
+    </div>
+</div>

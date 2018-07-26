@@ -11,6 +11,7 @@ export class BarradevidaService {
   private LabelDiferencaValores:HTMLElement;
   private BoxDiferencaValores:HTMLElement;
   private _animarValores:AnimarValores;
+  private eventBarraBox:HTMLElement;
 
   constructor() { 
     this.valorBarra = document.querySelector('#barradevidabar .valor-barra') as HTMLElement;
@@ -18,6 +19,7 @@ export class BarradevidaService {
     this.Label = document.querySelector("#barradevidabar .label") as HTMLElement;
     this.LabelDiferencaValores = document.querySelector("#valorDiferencaBarra") as HTMLElement;
     this.BoxDiferencaValores = document.querySelector("#boxDiferencaBarra") as HTMLElement;
+    this.eventBarraBox = document.querySelector("#eventBarraBox") as HTMLElement;
     this._animarValores = new AnimarValores();
   }
 
@@ -32,18 +34,29 @@ export class BarradevidaService {
       $(this.valorBarra).css("width",novoValor+"%");
   }
 
+
   public atualizarVidaAnimado(valorAtual:number, sum:number):void{
     var novoValor = valorAtual + sum;
-    // this.BoxDiferencaValores.classList
-    if(sum <= 0){
+    this.BoxDiferencaValores.classList.remove("bar-color");
+    this.BoxDiferencaValores.classList.remove("emprego-color");
+    
+    if(sum < 0){
+      this.BoxDiferencaValores.classList.add("emprego-color");
+    }else if(sum > 0){
+      this.BoxDiferencaValores.classList.add("bar-color");
     }
 
+    $(this.eventBarraBox).slideDown();
+
+    setTimeout(() => this._animarValores.AnimarValor([sum],[this.LabelDiferencaValores.id]),300);
+    
     if(novoValor < 0)
       novoValor = 0;
     if(novoValor > 100)
       novoValor = 100;
 
-      $(this.valorBarra).css("width",novoValor+"%");
+    setTimeout(() => $(this.valorBarra).css("width",novoValor+"%"),1200);
+    setTimeout(() => $(this.eventBarraBox).slideUp(),2000);
   }
 
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Personagem } from '../../_models/personagem/personagem';
 import { HttpClient } from '@angular/common/http';
 import * as personagens from '_repository/personagens.json';
-import 'rxjs/Rx';
+import 'rxjs';
 
 @Injectable()
 export class PersonagensService {

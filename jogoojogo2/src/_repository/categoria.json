@@ -1,0 +1,26 @@
+[
+    {
+    "categoria":1,
+    "cor":"azul",
+    "icone":"",
+    "nome": "Q.I."
+    },
+    {
+    "categoria":2,
+    "cor":"vermelho",
+    "icone":"",
+    "nome": "Habilidade"
+    },
+    {
+    "categoria":3,
+    "cor":"amarelo",
+    "icone":"",
+    "nome": "Desafio"
+    },
+    {
+    "categoria":4,
+    "cor":"verde",
+    "icone":"",
+    "nome": "Sorte ou Reves"
+    }
+]

@@ -8,8 +8,9 @@
     src: url("../src/assets/fonts/8-bit.ttf");
 }
 :root {
-    --roxo: rgb(96, 6, 181);
+    --roxo: #6006b5;
     --verde:#2cff8c;
+    --verde_escuro:#0F642E;
     --vermelho:#ff0000;
     --vermelho_escuro:#c70707;
     --bordo:#b1423d;
@@ -18,6 +19,7 @@
     --amarelo:#d2bc1e;
     --texto_claro:white;
     --fundo_claro:white;
+    --neutra:#B8BE54;
     --contorno:black;
     --preto:#1a1a1a;
     --fundo_escuro_transparente:rgba(80,80,80,0.5);
@@ -40,6 +42,13 @@ body{
 }
 .roxo{
     background-color:  var(--roxo);
+}
+.preto{
+    background-color:  var(--preto);
+    color:var(--texto_claro);
+}
+.neutra{
+    background-color:  var(--neutra);
 }
 .verde{
     background-color: var(--verde);
@@ -66,6 +75,9 @@ body{
 }
 .txtazul{
     color:var(--azul);
+}
+.txtverde-escuro{
+    color:var(--verde_escuro);
 }
 .contorno{
     text-shadow: -1vh 0 var(--contorno), 0 1vh var(--contorno), 1vh 0 var(--contorno), 0 -1vh var(--contorno);

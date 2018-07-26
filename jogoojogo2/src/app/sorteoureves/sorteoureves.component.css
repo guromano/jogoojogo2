@@ -1,0 +1,46 @@
+#sorteoureves{
+    transition: 1s all;
+}
+#nomejogo{
+    display: none;
+}
+.apresentacao h1{
+    color: var(--texto_claro);
+    margin-bottom: 20vh;
+}
+.apresentacao{
+    text-align: center;
+    padding-top: 5vh;
+}
+.text{
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+.titulo{
+    height: 20vh;
+}
+.continuar{
+    display: none;
+    margin-left: 37.5vw;
+    margin-top: 20vh;
+}
+.lista-jogadores{
+    display: none;
+    margin-top: 10vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 30vh;
+    white-space: nowrap;
+}
+.jogador-escolha img{
+    width: 10vw;
+}
+.jogador-escolha{
+    display: inline-block;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    cursor: pointer;
+}
+.jogador-escolha h2{
+    font-size: 20px;
+}

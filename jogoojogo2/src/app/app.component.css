@@ -25,7 +25,7 @@
 #barradevidabar .label{
     display: block;
     margin: 0;
-    width: 10vw;
+    width: 35vw;
     height: 3vh;
     text-align: center;
     font-size: 2vh;
@@ -75,13 +75,54 @@
     color: var(--preto);
     font-size: 30px;
 }
+#eventBarraBox{
+    display: none;
+}
 .sinal
 {
     font-family: "8bit2";
     margin-left: 5px;
 }
+.pontos{
+    margin-top: 3vh;
+}
 .valor{
     font-size:40px;
+}
+.bar-color{
+    color:var(--azul);
+}
+.emprego-color{
+    color:var(--vermelho);
+}
+#eventBox{
+    position: absolute;
+    width: 50vw;
+    left:25vw;
+    height: 70vh; 
+    top:15vh;
+    background-color: white;
+    border:black 5px solid;
+    transition: 2s all;
+    opacity: 0;
+    display: none
+}
+#eventBox .jogador{
+    width: 49%;
+    padding: 10px;
+    text-align: center;
+}
+#eventBox .jogador img{
+    width: 50%;
+}
+#eventBox .infomsg{
+    width: 50%;
+    text-align: center;
+    font-size: 75px;
+}
+#eventBox .infomsg img{
+    width: 50%;
+    min-height: 100px;
 }
 
 

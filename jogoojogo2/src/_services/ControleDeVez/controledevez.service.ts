@@ -77,4 +77,7 @@ export class ControledevezService {
     return retorno;
   }
 
+  getJogadores():Array<Jogador>{
+    return JSON.parse(window.localStorage.getItem("jogadores")) as Array<Jogador>;
+  }
 }

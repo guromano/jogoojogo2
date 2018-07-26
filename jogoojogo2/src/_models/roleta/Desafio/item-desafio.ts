@@ -8,6 +8,7 @@ export class ItemDesafio extends ItemRoleta{
     }
 
     public pontosGeral:number;
+    public sortearDesafiador:boolean;
 
     
 }

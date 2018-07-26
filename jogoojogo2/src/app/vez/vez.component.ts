@@ -8,7 +8,11 @@ import * as $ from "jquery";
 import Swiper from 'swiper';
 import { JogadorPlacar } from '../../_models/jogador/jogador-placar';
 import { Jogador } from '../../_models/jogador/jogadores';
-import { reject } from 'q';
+import { ItemRoleta } from '../../_models/roleta/item-roleta';
+import { ControleJogosService } from '../../_services/ControleJogos/controle-jogos.service';
+import { TipoItemRoleta } from '../../_models/roleta/tipo-item-roleta';
+import { TipoTimeRoleta } from '../../_models/roleta/tipo-time-roleta';
+import { CategoriaJogo } from '../../_models/roleta/categoria-jogo';
 
 @Component({
   selector: 'app-vez',
@@ -20,14 +24,19 @@ export class VezComponent implements OnInit {
   public jogadorPlacarDaVez:JogadorPlacar;
   public jogadorVez:Jogador;
   public posicao:number;
+  public CategoriasRoleta:Array<CategoriaJogo>;
+  public timeJogador:TipoTimeRoleta;
 
   constructor(@Inject(BarradevidaService) private _barradevidaService :BarradevidaService,
   @Inject(ControledevezService) private _controledevezService :ControledevezService,
   @Inject(ControlePontosService) private _controlepontosService :ControlePontosService,
+  @Inject(ControleJogosService) private _controlejogosService :ControleJogosService,
   private router: Router) {
     this.jogadorVez = this._controledevezService.jogadorVez();
     this.jogadorPlacarDaVez = this._controlepontosService.getPlacarJogador(this.jogadorVez.id);
     this.posicao = this._controlepontosService.getPosJogador(this.jogadorVez.id) + 1;
+    this.timeJogador = this.jogadorPlacarDaVez.pontosBar >= this.jogadorPlacarDaVez.pontosTrabalho ? TipoTimeRoleta.Bar : TipoTimeRoleta.Trabalho;
+    this.CategoriasRoleta = this._controlejogosService.gerarBoxJogosRoleta();
   }
 
   ngOnInit() {
@@ -89,7 +98,7 @@ export class VezComponent implements OnInit {
     },500);
     setTimeout(()=>{
       this._barradevidaService.mostrarBarraDeVidaAlterandoLabel(this.jogadorVez.nome);
-      setTimeout(() => {this._barradevidaService.atualizarVida(this.jogadorPlacarDaVez.nivelBar)},300);     
+      setTimeout(() => {this._barradevidaService.atualizarVida(this.jogadorPlacarDaVez.nivelBarra)},300);   
     },1200)
   }
 
@@ -122,7 +131,7 @@ export class VezComponent implements OnInit {
     return new Promise((resolve,reject) =>{
       var mySwiper = document.querySelector('.swiper-container') as any;
       //TODO trocar para tamanho da lista e jogos
-      var tamanho = 6;
+      var tamanho = this.CategoriasRoleta.length;
       var voltas = (this.getRandomInt(0,tamanho + 1) + tamanho*10);
       var i = 0;
       var velocidade = 100;
@@ -133,7 +142,7 @@ export class VezComponent implements OnInit {
 
     });  
   }
-  sortearId(swiper:any,voltas,i,velocidade):Promise<number>{
+  sortearId(swiper:any,voltas,i,velocidade):Promise<TipoItemRoleta>{
     return new Promise((resolve) => {
       setTimeout(() => {
         swiper.slidePrev(velocidade,false);
@@ -143,7 +152,9 @@ export class VezComponent implements OnInit {
           var slide = document.querySelector(".swiper-slide-active");
           container.classList.remove("bounceInUp");
           setTimeout(()=>{container.classList.add("tada")},velocidade);
-          resolve(1);
+          var element = document.querySelector(".swiper-slide-active input") as HTMLInputElement;
+          var result = parseInt(element.value) as TipoItemRoleta; 
+          resolve(result);
         }else{
           i++;
           if(i > voltas*(2/3)){
@@ -159,4 +170,13 @@ export class VezComponent implements OnInit {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
   }
+
+  redirectGame(tipo:TipoItemRoleta){
+    switch(tipo){
+      case TipoItemRoleta.SorteOuReves:
+        this.router.navigate(['/sorteoureves']);
+      break;
+    }
+  }
+
 }

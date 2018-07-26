@@ -21,6 +21,11 @@ import { PlacarService } from '../_services/Placar/placar.service';
 import { ControlePontosService } from '../_services/ContolePontos/controle-pontos.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { ControleJogosService } from '../_services/ControleJogos/controle-jogos.service';
+import { SorteourevesComponent } from './sorteoureves/sorteoureves.component';
+import { EventService } from '../_services/Event/event.service';
+import { DesafioComponent } from './desafio/desafio.component';
+import { QiComponent } from './qi/qi.component';
 
 
 @NgModule({
@@ -32,6 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     IniciojogoComponent,
     PrejogoComponent,
     VezComponent,
+    SorteourevesComponent,
+    DesafioComponent,
+    QiComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +56,9 @@ import { HttpClientModule } from '@angular/common/http';
     ControledevezService,
     PlacarService,
     ControlePontosService,
-    HttpModule
+    HttpModule,
+    ControleJogosService,
+    EventService
   ],
   bootstrap: [AppComponent]
 })

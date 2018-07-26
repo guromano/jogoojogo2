@@ -2,7 +2,7 @@ import * as anime from 'animejs';
 
 export class AnimarValores {
 
-    AnimarNota(valores:Array<number>, ids:Array<string>){
+    AnimarValor(valores:Array<number>, ids:Array<string>){
        var animate = new Array();
         for(let i = 0; i < valores.length; i++){
             animate[i] = anime({
@@ -19,7 +19,7 @@ export class AnimarValores {
         }
     }
 
-    AnimarNotaASync(valor:number, id:string):Promise<void>{
+    AnimarValorASync(valor:number, id:string):Promise<void>{
         return new Promise((resolve) => {
             var animate = anime({
                 targets: {value:0},

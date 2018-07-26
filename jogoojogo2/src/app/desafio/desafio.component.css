@@ -1,0 +1,35 @@
+.titulo h1{
+    color: var(--texto_claro);
+    margin-bottom: 10vh;
+    text-align: center;
+}
+.titulo{
+    text-align: center;
+    padding-top: 10vh;
+    width: 100vw;
+    display: inline-block;
+}
+.jogador-sorteado{
+    width: 100vw;
+    text-align: center;
+    color: var(--texto_claro);
+
+}
+.jogador-sorteado img{
+    width: 15vw;
+}
+.opcoes{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 20vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    display: none
+}
+.inline{
+    display: inline-flex;
+}
+.lf{
+    margin-left: 5vw;
+}

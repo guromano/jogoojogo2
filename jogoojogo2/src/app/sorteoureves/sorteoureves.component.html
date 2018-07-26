@@ -1,0 +1,15 @@
+<div id="sorteoureves" class="body neutra">
+  <div class="apresentacao">
+    <div class="titulo"><h1 id="nomejogo" class="contorno">{{sorteOuRevesGame.nome}}</h1></div>
+    <div id="textjogo" class="text"></div>
+    <div class="botao continuar" (click)="continuar()">Continuar</div>
+    <div class="lista-jogadores">
+      <ng-container *ngFor="let jogadorPlacar of jogadoresPlacar;">
+      <div class="jogador-escolha" (click)="continuar2(jogadorPlacar)"  *ngIf="jogadorPlacar.id != jogadorVez.id">
+        <h2>{{jogadorPlacar.nome}}</h2>
+        <img src="{{jogadorPlacar.personagem.imagem}}">
+      </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

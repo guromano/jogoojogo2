@@ -5,7 +5,8 @@
     "icone":"",
     "nome":"Desafio",
     "tipoTime":0,
-    "pontosGeral":1
+    "pontosGeral":1,
+    "sortearDesafiador":true
     },
     {
     "tipo":3,
@@ -13,7 +14,8 @@
     "icone":"",
     "nome":"Fazer storie vergonhoso",
     "tipoTime":0,
-    "pontosGeral":1
+    "pontosGeral":1,
+    "sortearDesafiador":true
     },
     {
     "tipo":3,
@@ -21,14 +23,16 @@
     "icone":"",
     "nome":"Drink Azelele",
     "tipoTime":0,
-    "pontosGeral":1
+    "pontosGeral":1,
+    "sortearDesafiador":true
     },
     {
     "tipo":3,
     "idJogo":12,
     "icone":"",
-    "nome":"Cheire o pé do mathias",
+    "nome":"Cheire o peh do mathias",
     "tipoTime":0,
-    "pontosGeral":1
+    "pontosGeral":1,
+    "sortearDesafiador":false
     }
 ]

@@ -6,6 +6,8 @@ import { PersonagensComponent } from './personagens/personagens.component';
 import { IniciojogoComponent } from './iniciojogo/iniciojogo.component';
 import { PrejogoComponent } from './prejogo/prejogo.component';
 import { VezComponent } from './vez/vez.component';
+import { SorteourevesComponent } from './sorteoureves/sorteoureves.component';
+import { DesafioComponent } from './desafio/desafio.component';
 
 const routes: Routes = [
     { path: '', component:  InitsceneComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
     { path: 'iniciojogo', component:  IniciojogoComponent },
     { path: 'prejogo', component:  PrejogoComponent },
     { path: 'vez', component:  VezComponent },
+    { path: 'sorteoureves', component:  SorteourevesComponent },    
+    { path: 'desafio', component:  DesafioComponent },
 ];
 
 @NgModule({

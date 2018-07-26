@@ -1,22 +1,57 @@
 [
     {
         "id": 1,
-        "nome": "Teste",
-        "imagem": "/assets/images/krober.png"
+        "nome": "Ana Kalaf",
+        "imagem": "/assets/images/personagens/ANA.gif"
     },
     {
         "id": 2,
-        "nome": "Teste2",
-        "imagem": "/assets/images/caveira.png"
+        "nome": "Natalia (Beem)",
+        "imagem": "/assets/images/personagens/BEM.gif"
     },
     {
         "id": 3,
-        "nome": "Teste3",
-        "imagem": "/assets/images/beer.png"
+        "nome": "Play",
+        "imagem": "/assets/images/personagens/BRUNO.gif"
     },
     {
-        "id": 3,
-        "nome": "Teste3",
-        "imagem": "/assets/images/espada.png"
+        "id": 4,
+        "nome": "Caju",
+        "imagem": "/assets/images/personagens/CAJU.gif"
+    },
+    {
+        "id": 5,
+        "nome": "Marcelo",
+        "imagem": "/assets/images/personagens/CELAO.gif"
+    },
+    {
+        "id": 6,
+        "nome": "Giovana",
+        "imagem": "/assets/images/personagens/GIGI.gif"
+    },
+    {
+        "id": 7,
+        "nome": "Gustavo Romano",
+        "imagem": "/assets/images/personagens/GUGU.gif"
+    },
+    {
+        "id": 8,
+        "nome": "Mathias",
+        "imagem": "/assets/images/personagens/MATHIAS.gif"
+    },
+    {
+        "id": 9,
+        "nome": "Milena",
+        "imagem": "/assets/images/personagens/MILENA.gif"
+    },
+    {
+        "id": 10,
+        "nome": "Gu Stancial",
+        "imagem": "/assets/images/personagens/STANCIAL.gif"
+    },
+    {
+        "id": 11,
+        "nome": "Tobias",
+        "imagem": "/assets/images/personagens/TOMAZ.gif"
     }
 ]

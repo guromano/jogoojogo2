@@ -1,0 +1,28 @@
+<div id="placarGeral" class="body">
+  <div id="placargeralzao">
+    <h2 class="bounceInDown animated">Placar Geral</h2>   
+    <div class="placar">
+      <table class="placartb">
+          <tr class="head">
+              <th>Pos</th>
+              <th>Personagem</th>
+              <th>Jogador</th>
+              <th>Pontos</th>
+          </tr>
+          <tr id="tr{{i}}" *ngFor="let jogador of jogadores; let i=index">
+            <td class="pos">{{i+1}}</td>
+            <td class="imagem"><img src="{{jogador.personagem.imagem}}"></td>
+            <td class="nome">{{jogador.nome}}</td>
+            <td class="pontos">{{jogador.litrao}}<img class="pontosimg" src="/assets/images/crystal.png"></td>
+          </tr>
+      </table>
+    </div>
+    <div (click)="continuar()" id="continuarplacar" class="botao">Continuar</div>
+  </div>
+  <div id="vencedor" *ngIf="vencedor">
+    <h1>VENCEDOR</h1>
+    <h1>{{vencedor.nome}}</h1>
+    <img src="{{vencedor.personagem.imagem}}">
+  </div>
+</div>
+  

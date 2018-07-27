@@ -22,8 +22,17 @@
 #apresentacao-vez .vezde{
     opacity: 0;
 }
+.pontoicone{
+    width: 3vw;
+}
 #apresentacao-vez .nomejogador{
     opacity: 0;
+    display: none;
+}
+.timebar{  
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 30%;
     display: none;
 }
 .info-bar{
@@ -43,6 +52,7 @@
     position: relative;
     float: right;
     margin-top: 15vh;
+    text-align: right;
 }
 .jogadorvez{
     display: inline-block;
@@ -66,10 +76,10 @@
 }
 
 .jogadorvez .valoresjogador .nome{
-    font-size: 5vh;
+    font-size: 2vh;
 }
 .jogadorvez .valoresjogador .nome{
-    font-size: 5vh;
+    font-size: 2vh;
 }
 
 .jogadorvez .valoresjogador .pontos{
@@ -80,6 +90,7 @@
     height: 55vh;
     display: block;
     position: relative;
+    text-align: center;
 }
 .blocoextra.bar{
     float: left;

@@ -1,3 +1,14 @@
-<p>
-  qi works!
-</p>
+<div id="qi" class="body">
+    <div class="icone"></div>
+    <div class="titulo"><h1 id="nomejogo" class="contorno">{{jogo.nome}}</h1></div>
+    <div class="jogador-sorteado" *ngIf="desafiador">
+      Jogar com
+      <h2>{{desafiador.nome}}</h2>
+      <img src="{{desafiador.personagem.imagem}}">
+    </div>
+
+    <div class="opcoes">
+      <div (click)="errou()" class="botao inline">Errou</div>
+      <div (click)="acertou()" class="botao inline lf">Acertou</div>
+    </div>
+</div>

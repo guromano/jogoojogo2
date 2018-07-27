@@ -31,6 +31,7 @@ export class PrejogoComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.localStorage.setItem("primeirarodada",JSON.stringify(1));
     setTimeout(() => {
       this.exibirProximo(0);
     },500);

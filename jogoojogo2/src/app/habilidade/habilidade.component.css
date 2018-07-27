@@ -1,0 +1,81 @@
+.titulo h1{
+    color: var(--texto_claro);
+    margin-bottom: 3vh;
+    text-align: center;
+}
+.icone img{
+    width: 12vw;
+}
+.icone{
+    display: inline-block;
+    text-align: center;
+    width: 100vw;   
+}
+.titulo{
+    text-align: center;
+    padding-top: 3vh;
+    width: 100vw;
+    display: inline-block;
+}
+.jogador-sorteado{
+    width: 100vw;
+    text-align: center;
+    color: var(--texto_claro);
+
+}
+.jogador-sorteado img{
+    width: 15vw;
+}
+#time{
+    margin-bottom: -1vh;
+}
+.versus{
+    position: absolute;
+    width: 30vw;
+    left: 35vw;
+    top: 50vh;
+    color: white;
+    font-size: 75px;
+}
+.opcoes{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 12vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    display: none
+}
+.inline{
+    display: inline-flex;
+}
+.lf{
+    margin-left: 5vw;
+}
+.jogadorTime img{
+    width: 5vw;
+}
+.times h1{
+    font-size: 20px;
+}
+.timeBar{
+    display: block;
+    float: left;
+    color: var(--texto_claro);
+    margin-left: 5vw;
+    height: 8vh;
+    width: 30vw;
+}
+.times{
+    width: 100vw;
+    text-align: center;
+    display: none;
+}
+.timeEmprego{
+    display: block;
+    float: right;
+    color: var(--texto_claro);
+    margin-right: 5vw;
+    height: 8vh;
+    width: 30vw;
+}

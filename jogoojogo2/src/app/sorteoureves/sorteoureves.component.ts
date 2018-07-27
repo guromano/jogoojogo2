@@ -10,6 +10,7 @@ import { EventService } from '../../_services/Event/event.service';
 import { TipoEvento } from '../../_models/evento/tipo-evento';
 import { TipoSorteOuReves } from '../../_models/roleta/SorteOuReves/tipo-sorte-ou-reves';
 import { JogadorPlacar } from '../../_models/jogador/jogador-placar';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-sorteoureves',
@@ -29,6 +30,7 @@ export class SorteourevesComponent implements OnInit {
     @Inject(ControlePontosService) private _controlepontosService :ControlePontosService,
     @Inject(ControleJogosService) private _controlejogosService :ControleJogosService,
     @Inject(EventService) private _eventService :EventService,
+    private router: Router
   ) {
     this.jogadorVez = _controledevezService.jogadorVez();
     this.sorteOuRevesGame = _controlejogosService.getRandomSorteOuReves();
@@ -65,13 +67,13 @@ export class SorteourevesComponent implements OnInit {
       $(".continuar").hide();
     }else{
       this.executarPontuacaoSorteOuReves().then(() =>{
-        //TODO redirect tela de pontos
+        this.router.navigate(['/placar']);
       });
     }
   }
   continuar2(jogador:JogadorPlacar){
     this.executarPontuacaoSorteOuRevesComJogadorTransf(jogador).then(() =>{
-          //TODO redirect tela de pontos
+      this.router.navigate(['/placar']);
       });
   }
 

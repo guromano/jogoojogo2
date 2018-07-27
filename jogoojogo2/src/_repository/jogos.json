@@ -2,7 +2,7 @@
     {
     "tipo":1,
     "idJogo":20,
-    "icone":"",
+    "icone":"/assets/images/icones/FUNIL-SHOT.png",
     "nome":"FunilShot",
     "tipoTime":0,
     "pontosGeral":1,
@@ -13,7 +13,7 @@
     {
     "tipo":1,
     "idJogo":21,
-    "icone":"",
+    "icone":"/assets/images/icones/BEER-PONG.png",
     "nome":"BeerPong",
     "tipoTime":0,
     "pontosGeral":1,
@@ -24,7 +24,7 @@
     {
     "tipo":1,
     "idJogo":22,
-    "icone":"",
+    "icone":"/assets/images/icones/FLIP-CUP.png",
     "nome":"FlipCup",
     "tipoTime":0,
     "pontosGeral":1,
@@ -35,7 +35,7 @@
     {
     "tipo":1,
     "idJogo":23,
-    "icone":"",
+    "icone":"/assets/images/beer-512.png",
     "nome":"Desafio de shot",
     "tipoTime":0,
     "pontosGeral":1,

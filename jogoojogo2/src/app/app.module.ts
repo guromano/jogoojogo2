@@ -26,6 +26,9 @@ import { SorteourevesComponent } from './sorteoureves/sorteoureves.component';
 import { EventService } from '../_services/Event/event.service';
 import { DesafioComponent } from './desafio/desafio.component';
 import { QiComponent } from './qi/qi.component';
+import { HabilidadeComponent } from './habilidade/habilidade.component';
+import { PlacarComponent } from './placar/placar.component';
+import { PlacarGeralComponent } from './placar-geral/placar-geral.component';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import { QiComponent } from './qi/qi.component';
     SorteourevesComponent,
     DesafioComponent,
     QiComponent,
+    HabilidadeComponent,
+    PlacarComponent,
+    PlacarGeralComponent,
   ],
   imports: [
     BrowserModule,

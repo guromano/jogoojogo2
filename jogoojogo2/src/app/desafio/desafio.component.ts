@@ -8,11 +8,14 @@ import { ItemDesafio } from '../../_models/roleta/Desafio/item-desafio';
 import * as $ from "jquery";
 import { resolve } from '../../../node_modules/@types/q';
 import { TipoEvento } from '../../_models/evento/tipo-evento';
+import { slideInOutAnimation } from '../../_animations';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-desafio',
   templateUrl: './desafio.component.html',
-  styleUrls: ['./desafio.component.css']
+  styleUrls: ['./desafio.component.css'],
+  animations: [slideInOutAnimation],
 })
 export class DesafioComponent implements OnInit {
 
@@ -26,6 +29,7 @@ export class DesafioComponent implements OnInit {
     @Inject(ControlePontosService) private _controlepontosService :ControlePontosService,
     @Inject(ControleJogosService) private _controlejogosService :ControleJogosService,
     @Inject(EventService) private _eventService :EventService,
+    private router: Router
   ) {
     this.jogadorVez = _controledevezService.jogadorVez();
     this.desafio = _controlejogosService.getRandomDesafio();
@@ -44,13 +48,13 @@ export class DesafioComponent implements OnInit {
   }
 
   arregar(){
-    //TODO redirect
+    this.router.navigate(['/placar']);
   }
 
   encarar(){
     this._controlepontosService.AlterarPontosGeral(this.jogadorVez.id,this.desafio.pontosGeral);
     this._eventService.emitirEvento(this.jogadorVez,TipoEvento.PontoLitrao,this.desafio.pontosGeral).then(()=>{
-          //TODO redirect
+      this.router.navigate(['/placar']);
     })
   }
   aparecerOpcoes(){
@@ -71,10 +75,18 @@ export class DesafioComponent implements OnInit {
         };
         if(timer >= (5000)){
           clearInterval(interval);
-          this.desafiador = this.jogadores[Math.floor(Math.random() * this.jogadores.length)];
+          this.desafiador = this.jogadores.filter(x => x.id != this.jogadorVez.id)[this.sortearValor()];
           resolve();
         }
       },100);
     });
+  }
+
+  sortearValor(){
+    var random = Math.floor(Math.random() * this.jogadores.length);
+    while(random == this.jogadorVez.id){
+      random = Math.floor(Math.random() * this.jogadores.length);
+    }
+    return random;
   }
 }

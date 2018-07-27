@@ -1,0 +1,42 @@
+<div id="habilidade" class="body">
+  <div class="jogo">
+    <div class="titulo walign-center"><h1 id="nomejogo" *ngIf="jogoSortear" class="contorno">{{jogoSortear.nome}}</h1></div>
+    <div class="icone" *ngIf="jogoSortear"><img src="{{jogoSortear.icone}}"></div>
+  </div>
+  <div class="jogador-sorteado" *ngIf="desafiador">
+    Jogar com
+    <h2>{{desafiador.nome}}</h2>
+    <img src="{{desafiador.personagem.imagem}}">
+  </div>
+
+  <div class="times" *ngIf="jogo.sorteioTime">
+      <div class="timeBar">
+        <h1>Bar</h1>
+        <div id="j{{jogador.id}}" class="jogadorTime" *ngFor="let jogador of timeBar; let i=index"> 
+          {{jogador.nome}}
+          <img src="{{jogador.personagem.imagem}}">
+        </div>
+      </div>
+      <div class="versus">X</div>
+      <div class="timeEmprego">
+          <h1>Trabalho</h1>
+          <div id="j{{jogador.id}}" class="jogadorTime" *ngFor="let jogador of timeEmprego; let i=index"> 
+            <img src="{{jogador.personagem.imagem}}">
+            {{jogador.nome}}
+          </div>
+        </div>
+    </div>
+
+  <div class="opcoes" id="desafio">
+    <div (click)="perdeu()" class="botao inline">Perdeu</div>
+    <div (click)="ganhou()" class="botao inline lf">Ganhou</div>
+  </div>
+  <div class="opcoes" id="time">
+      <div (click)="bar()" class="botao inline">Bar</div>
+      <div (click)="emprego()" class="botao inline lf">Emprego</div>
+  </div>
+  <div class="opcoes" id="individual">
+      <div (click)="arregar()" class="botao inline">Arregar</div>
+      <div (click)="encarar()" class="botao inline lf">Encarar</div>
+  </div>
+</div>

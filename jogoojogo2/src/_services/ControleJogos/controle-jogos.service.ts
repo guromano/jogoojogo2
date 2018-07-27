@@ -50,6 +50,22 @@ export class ControleJogosService {
     return this.jogosDesafio[Math.floor(Math.random() * this.jogosDesafio.length)];
   }
 
+  public getRandomQI():ItemQI{
+    return this.jogosQi[Math.floor(Math.random() * this.jogosQi.length)];
+  }
+
+  public getRandomHabilidade():ItemJogo{
+    return this.jogosJogo[Math.floor(Math.random() * this.jogosJogo.length)];
+  }
+
+  public getFlipCup():ItemJogo{
+    return this.jogosJogo.find(x => x.idJogo == 22);
+  }
+
+  public getHabilidade():Array<ItemJogo>{
+    return this.jogosJogo;
+  }
+
   private sortearOrdem(jogos:Array<CategoriaJogo>):Array<CategoriaJogo>{
     var currentIndex = jogos.length, temporaryValue, randomIndex;
 

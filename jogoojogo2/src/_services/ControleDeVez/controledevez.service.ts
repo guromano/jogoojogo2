@@ -14,6 +14,9 @@ export class ControledevezService {
     this.vezIndex = this.verificarIndex();
   }
 
+  public getIndex():number{
+    return this.vezIndex;
+  }
   public getOrdemJogadores():Array<OrdemJogador>{
     return this.OrdemJogadores;
   }

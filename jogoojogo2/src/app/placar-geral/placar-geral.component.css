@@ -1,0 +1,44 @@
+.body{
+    color: var(--texto_claro);
+    text-align: center;
+    padding-top: 2vh;
+}
+.imagem img{
+    width: 5vw;
+}
+.placar{
+    width: 50vw;
+    margin-left: 25vw;
+    height: 85vh;
+    overflow-y: auto;
+}
+.placartb{
+    width: 100%;
+    margin-top: 2vh;
+}
+tr{
+    display: none;
+}
+#tr0{
+    animation:piscar 0.25s infinite;
+}
+.pontosimg{
+    width: 3vw;
+}
+#continuarplacar{
+    position: absolute;
+    right: 0vw;
+    font-size: 2vh;
+    width: 10vw;
+    top: 85vh;
+}
+#vencedor img{
+    width: 30vw;
+}
+@keyframes piscar
+{
+0%   {background:var(--fundo_escuro_transparente);}
+50%  {background:var(--fundo_claro_transparente);}
+100%   {background:var(--fundo_escuro_transparente);}
+}
+  

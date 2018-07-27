@@ -13,11 +13,15 @@ import { ControleJogosService } from '../../_services/ControleJogos/controle-jog
 import { TipoItemRoleta } from '../../_models/roleta/tipo-item-roleta';
 import { TipoTimeRoleta } from '../../_models/roleta/tipo-time-roleta';
 import { CategoriaJogo } from '../../_models/roleta/categoria-jogo';
+import { slideInOutAnimation } from '../../_animations';
+import { EventService } from '../../_services/Event/event.service';
+import { TipoEvento } from '../../_models/evento/tipo-evento';
 
 @Component({
   selector: 'app-vez',
   templateUrl: './vez.component.html',
-  styleUrls: ['./vez.component.css']
+  styleUrls: ['./vez.component.css'],
+  animations: [slideInOutAnimation],
 })
 export class VezComponent implements OnInit {
 
@@ -31,7 +35,9 @@ export class VezComponent implements OnInit {
   @Inject(ControledevezService) private _controledevezService :ControledevezService,
   @Inject(ControlePontosService) private _controlepontosService :ControlePontosService,
   @Inject(ControleJogosService) private _controlejogosService :ControleJogosService,
-  private router: Router) {
+  @Inject(EventService) private _eventService :EventService,
+  private router: Router
+  ) {
     this.jogadorVez = this._controledevezService.jogadorVez();
     this.jogadorPlacarDaVez = this._controlepontosService.getPlacarJogador(this.jogadorVez.id);
     this.posicao = this._controlepontosService.getPosJogador(this.jogadorVez.id) + 1;
@@ -40,8 +46,26 @@ export class VezComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(this.jogadorPlacarDaVez.nivelBarra<50){
+      $("#iconetrb").show();
+    }else if(this.jogadorPlacarDaVez.nivelBarra>50){
+      $("#iconebar").show();
+    }
     setTimeout(() => {this.InitAnimation();},200)
     setTimeout(() => {this.InitElements();},3000);
+    setTimeout(() =>{
+      if( window.localStorage.getItem("primeirarodada") == "1"){
+        if(this._controledevezService.getIndex() % 2 == 0){
+          this._controlepontosService.AlterarPontosBarra(this.jogadorVez.id,20);
+          this._eventService.emitirEvento(this.jogadorVez,TipoEvento.PontoBarraBar,20).then(()=>{
+          })
+        }else{
+          this._controlepontosService.AlterarPontosBarra(this.jogadorVez.id,-20);
+          this._eventService.emitirEvento(this.jogadorVez,TipoEvento.PontoBarraEmprego,20).then(()=>{
+          })
+        }
+      }
+    },4000);
   }
 
   InitAnimation(){
@@ -137,7 +161,8 @@ export class VezComponent implements OnInit {
       var velocidade = 100;
       this.sortearId(mySwiper.swiper,voltas,i,velocidade)
       .then((val) => {
-        console.log(val)
+        this._barradevidaService.esconderBarraDeVida();
+        setTimeout(() => {this.redirectGame(val)},2000);
       });
 
     });  
@@ -175,6 +200,15 @@ export class VezComponent implements OnInit {
     switch(tipo){
       case TipoItemRoleta.SorteOuReves:
         this.router.navigate(['/sorteoureves']);
+      break;
+      case TipoItemRoleta.Jogo:
+        this.router.navigate(['/habilidade']);
+      break;
+      case TipoItemRoleta.Desafio:
+        this.router.navigate(['/desafio']);
+      break;
+      case TipoItemRoleta.QI:
+        this.router.navigate(['/qi']);
       break;
     }
   }

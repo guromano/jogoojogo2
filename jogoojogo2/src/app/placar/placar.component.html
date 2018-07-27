@@ -1,0 +1,36 @@
+<div id="placar" class="body">
+   <div class="placar-times">
+     <div class="time bar">
+       <h2>Bar</h2>
+       <img src="/assets/images/icones/BAR.png">
+       <br>
+       <span id="pontosbar" class="pontos">0</span>
+     </div>
+     <div class="versus"></div>
+     <div class="trabalho time">
+        <h2>Trabalho</h2>
+        <img src="/assets/images/icones/EMPREGO.png">
+        <br>
+        <span id="pontostrabalho" class="pontos">0</span>
+      </div>
+      <div id="rodadas">Rodada {{round}}/{{roundLimit}}</div>
+      <div (click)="continuarPlacarTime()" id="continuarplacartimes" class="botao">Continuar</div>
+   </div>
+
+   <div class="time-vencedor-rodada">
+      <div class="aviso" *ngIf="!vencedor">
+        <h1>Empate<br>
+        Todos Bebem</h1>
+      </div>
+      <div class="time" *ngIf="vencedor">
+        <h3>Vencedor da rodada</h3>
+        <h2>{{vencedor.nome}}</h2>
+        <img src="{{vencedor.imagem}}">
+      <h3>Jogadores que bebem</h3>
+      <div class="lista-jogadores">
+        <p *ngFor="let jogador of jogadoresbeber;">{{jogador.nome}}</p>
+      </div>
+    </div>
+    <div (click)="redirect()" id="continuarplacar" class="botao">Continuar</div>
+    </div>
+</div>

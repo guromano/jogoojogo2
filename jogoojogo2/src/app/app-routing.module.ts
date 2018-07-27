@@ -8,6 +8,10 @@ import { PrejogoComponent } from './prejogo/prejogo.component';
 import { VezComponent } from './vez/vez.component';
 import { SorteourevesComponent } from './sorteoureves/sorteoureves.component';
 import { DesafioComponent } from './desafio/desafio.component';
+import { QiComponent } from './qi/qi.component';
+import { HabilidadeComponent } from './habilidade/habilidade.component';
+import { PlacarComponent } from './placar/placar.component';
+import { PlacarGeralComponent } from './placar-geral/placar-geral.component';
 
 const routes: Routes = [
     { path: '', component:  InitsceneComponent },
@@ -18,6 +22,10 @@ const routes: Routes = [
     { path: 'vez', component:  VezComponent },
     { path: 'sorteoureves', component:  SorteourevesComponent },    
     { path: 'desafio', component:  DesafioComponent },
+    { path: 'qi', component:  QiComponent },
+    { path: 'habilidade', component:  HabilidadeComponent },
+    { path: 'placar', component:  PlacarComponent },
+    { path: 'placargeral', component:  PlacarGeralComponent },
 ];
 
 @NgModule({

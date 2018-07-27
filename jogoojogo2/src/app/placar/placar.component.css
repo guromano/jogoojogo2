@@ -1,0 +1,50 @@
+.time img{
+    width: 15vw;
+}
+.time .pontos{
+    font-size: 5vw;
+} 
+.time{
+    color: var(--texto_claro);
+    display: inline-block;
+}
+.versus{
+    color: var(--texto_claro);
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.placar-times{
+    text-align: center;
+}
+#rodadas{
+    position: absolute;
+    color:var(--texto_claro);
+    width: 20vw;
+    left:40vw;
+    height: 10vh;
+    top:60vh;
+    font-size: 5vh;
+    display: none;
+}
+#continuarplacartimes{
+    position: absolute;
+    right: 5vw;
+    top: 85vh;
+    display: none;
+}
+#continuarplacar{
+    position: absolute;
+    right: 5vw;
+    top: 85vh;
+}
+.time-vencedor-rodada{
+    display: none;
+    width: 100vw;
+    text-align: center;
+    color:var(--texto_claro);
+}
+.aviso{
+    margin-top: 30vh;
+}

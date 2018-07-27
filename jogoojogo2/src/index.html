@@ -7,8 +7,31 @@
   <!-- <link href="https://fontlibrary.org/face/8bit-wonder" rel=""/> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> -->
+  <script type="text/javascript">
+  window.onload = function(){
+    var audio = document.getElementById('audio');
+    
+    var source = document.getElementById('audioSource');
+    source.src = "assets/music/0.mp3";
+  
+    audio.load(); //call this to just preload the audio without playing
+    audio.play();
+    audio.onended = function() {
+        var audio = document.getElementById('audio');
+  
+    var source = document.getElementById('audioSource');
+    source.src = "music/"+Math.floor(Math.random() * 19)+".mp3";
+  
+    audio.load(); //call this to just preload the audio without playing
+    audio.play();
+  };
+  }
+    </script>
 </head>
 <body>
   <app-root></app-root>
 </body>
+<audio id="audio">
+    <source id="audioSource" src=""></source>
+</audio>
 </html>

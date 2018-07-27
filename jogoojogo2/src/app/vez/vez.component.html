@@ -1,24 +1,24 @@
 <div id="vez" class="body">
-  <div class="info-bar"></div>
+  <div class="info-bar"><img id="iconebar" class="timebar" src="/assets/images/icones/BAR.png"> </div>
   <div class="jogadorvez">
     <div class="valoresjogador">
       <p id="nomej" class="nome">{{jogadorPlacarDaVez.nome}}</p>
-      <p id="pontosj"  class="pontos">{{posicao}} - {{jogadorPlacarDaVez.litrao}}L</p>
+      <p id="pontosj"  class="pontos">{{jogadorPlacarDaVez.litrao}}<img class="pontoicone" src="/assets/images/crystal.png"></p>
     </div>
     <div class="personagem">
       <div id="nomep" class="nome">{{jogadorPlacarDaVez.personagem.nome}}</div>
       <img  id="imgp" src="{{jogadorPlacarDaVez.personagem.imagem}}">
     </div>
   </div>
-  <div class="info-trabalho"></div>
+  <div class="info-trabalho"><img id="iconetrb" class="timebar" src="/assets/images/icones/EMPREGO.png"></div>
   <div class="blocoextra bar">
-
   </div>
   <div class="roleta">
       <div id="girarRoleta" class="botao" (click)="girarRoleta()">Girar Roleta</div>
       <div id="swipper" class="swiper-container">
           <div class="swiper-wrapper">
-            <div *ngFor="let categoria of CategoriasRoleta;" class="swiper-slide {{categoria.cor}}">{{categoria.nome}}<input id="{{categoria.nome}}-input" type="hidden" value="{{categoria.categoria}}"></div>
+            <div *ngFor="let categoria of CategoriasRoleta;" class="swiper-slide {{categoria.cor}}">{{categoria.nome}}
+              <input id="{{categoria.nome}}-input" type="hidden" value="{{categoria.categoria}}"></div>
           </div>
       
       </div>
